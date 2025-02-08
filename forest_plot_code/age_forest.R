@@ -33,7 +33,7 @@ text(-1.5, -1.5, paste("I^2 =", round(age_meta$I2, 2), "%"), cex = 1)
 # Funnel Plot and Eggers Regression Test
 age_eggers <- regtest(age_meta, data = T)
 funnel(age_meta, main = 'Funnel Plot: Age')
-lines(coef(age_eggers$fit)[1] + coef(age_eggers$fit)[2]*age_eggers$fit$se, age_eggers$fit$se, lwd=2, lty = 2)
+
 
 # Forest Plot with Fixed Effect Models
 age_metafe <- rma(measure = 'OR', yi = logOR, sei = se, dat = age_dat, method = 'FE', weighted = F)

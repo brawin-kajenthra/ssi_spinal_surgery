@@ -36,4 +36,3 @@ forest(op_time_metafe, slab = op_time_dat$Study, header = T, atransf = exp, xlab
 # Funnel Plot and Eggers Regression Test
 op_time_eggers <- regtest(op_time_meta, data = T)
 funnel(op_time_meta, main = 'Funnel Plot: Operating Time (>2 hrs)')
-lines(coef(op_time_eggers$fit)[1] + coef(op_time_eggers$fit)[2]*op_time_eggers$fit$se, op_time_eggers$fit$se, lwd=2, lty = 2)
